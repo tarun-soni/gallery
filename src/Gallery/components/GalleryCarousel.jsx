@@ -7,9 +7,11 @@ import {
   NextPreviousBtnContainer,
   NextPrevBtn,
   PREV,
-  NEXT
+  NEXT,
+  IconImg
 } from './Gallery.elements'
-
+import PrevBtn from '../icons/PrevBtn.svg'
+import NextBtn from '../icons/NextBtn.svg'
 const initialState = { pos: 0, sliding: false, dir: NEXT }
 
 const GalleryCarousel = ({ children }) => {
@@ -52,13 +54,11 @@ const GalleryCarousel = ({ children }) => {
         </CarouselContainer>
       </Wrapper>
       <NextPreviousBtnContainer>
-        <NextPrevBtn onClick={() => slide(PREV)} float="left">
-          Prev
-          {/* TODO: Prev icon */}
+        <NextPrevBtn onClick={() => slide(PREV)}>
+          <IconImg src={PrevBtn} alt="prev btn" />
         </NextPrevBtn>
         <NextPrevBtn onClick={() => slide(NEXT)} float="right">
-          Next
-          {/* TODO Next icon */}
+          <IconImg src={NextBtn} alt="next btn" />
         </NextPrevBtn>
       </NextPreviousBtnContainer>
     </div>

@@ -28,11 +28,23 @@ export const NextPreviousBtnContainer = styled.div`
   justify-content: center;
 `
 
-export const NextPrevBtn = styled.button`
+export const NextPrevBtn = styled.div`
+  background: #d0dce6;
   font-size: 16px;
   font-weight: 100;
-  padding: 1rem;
-  background-color: red;
+  border: none;
+  border-radius: 0.75rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  &:hover {
+    background: #bec8d1;
+  }
+`
+export const IconImg = styled.img`
+  margin: 1.25rem 1.5rem 1rem 1.5rem;
+  width: 0.75rem;
+  border-radius: 19px;
+  /* transform: rotate(-180deg); */
 `
 export const NEXT = 'NEXT'
 export const PREV = 'PREV'

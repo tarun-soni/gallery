@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import GalleryCarousel from './components/GalleryCarousel'
-
+import ShuffleIcon from './icons/shuffle.svg'
 const Gallery = ({ images = [] }) => {
   return (
     <div style={{ background: '#F5F8FB' }}>
@@ -14,7 +14,7 @@ const Gallery = ({ images = [] }) => {
           <h3>Shuffle</h3>
           <img
             style={{ height: '1.15rem', marginLeft: '0.5rem' }}
-            src="https://img.icons8.com/pastel-glyph/64/000000/cross-shuffle.png"
+            src={ShuffleIcon}
             alt="shuffle-icon"
           />
         </ShuffleBtn>
@@ -50,6 +50,9 @@ const ShuffleBtn = styled.div`
   padding: 0.2rem 1.5rem;
   border-radius: 1rem;
   cursor: pointer;
+  &:hover {
+    background: #bec8d1;
+  }
 `
 
 export const Item = styled.div`
