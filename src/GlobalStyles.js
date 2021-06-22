@@ -3,10 +3,9 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle`
   * {
     box-sizing: border-box;
-  }
+    font-family: 'Roboto', sans-serif;  }
 
   body, html {
     margin: 0;
-    font-family: 'Noto Sans', sans-serif;
-  }
+    font-family: 'Roboto', sans-serif;  }
 `

@@ -10,8 +10,8 @@ import {
   NEXT,
   IconImg
 } from './Gallery.elements'
-import PrevBtn from '../icons/PrevBtn.svg'
-import NextBtn from '../icons/NextBtn.svg'
+import PrevBtn from '../../../assets/icons/PrevBtn.svg'
+import NextBtn from '../../../assets/icons/NextBtn.svg'
 const initialState = { pos: 0, sliding: false, dir: NEXT }
 
 const GalleryCarousel = ({ children }) => {
