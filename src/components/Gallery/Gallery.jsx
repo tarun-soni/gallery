@@ -12,7 +12,7 @@ const Gallery = ({
   setQuery
 }) => {
   return (
-    <div style={{ background: '#F5F8FB' }}>
+    <GalleryContainer>
       <Header>
         <h1 style={{ margin: '1rem' }}>
           <strong>Gallery</strong>
@@ -50,9 +50,19 @@ const Gallery = ({
           ))}
         </GalleryCarousel>
       </div>
-    </div>
+    </GalleryContainer>
   )
 }
+
+const GalleryContainer = styled.div`
+  background: #f5f8fb;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+  }
+`
 
 const Header = styled.div`
   margin: 2rem;
@@ -60,6 +70,11 @@ const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   color: #126a85;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 `
 const ShuffleBtn = styled.div`
   margin: 1rem 2rem;
@@ -73,6 +88,11 @@ const ShuffleBtn = styled.div`
   cursor: pointer;
   &:hover {
     background: #bec8d1;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0.5rem 1rem;
+    padding: 0.1rem 1rem;
   }
 `
 
@@ -100,6 +120,12 @@ export const Item = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (max-width: 768px) {
+    /* margin: 0.5rem 1rem; */
+    width: 10rem;
+    height: 10rem;
+  }
 `
 
 export const ItemImg = styled.div`

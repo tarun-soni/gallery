@@ -3,18 +3,33 @@ export const Wrapper = styled.div`
   width: 45rem;
   overflow: hidden;
   padding-bottom: 3rem;
+
+  @media screen and (max-width: 768px) {
+    width: 40rem;
+  }
 `
 
 export const CarouselContainer = styled.div`
   display: flex;
   min-height: 20rem;
   margin-left: -16rem;
-  transition: ${(props) => (props.sliding ? 'none' : 'transform 0.75s ease')};
+  transition: ${(props) => (props.sliding ? 'none' : 'transform 2s ease')};
   transform: ${(props) => {
     if (!props.sliding) return 'translateX(-44.25%)'
     if (props.dir === PREV) return 'translateX(calc(2 * (-44.25%)))'
     return 'translateX(0%)'
   }};
+
+  @media screen and (max-width: 768px) {
+    margin-left: -4rem;
+    min-height: 10rem;
+    transition: ${(props) => (props.sliding ? 'none' : 'transform 2s ease')};
+    transform: ${(props) => {
+      if (!props.sliding) return 'translateX(-36%)'
+      if (props.dir === PREV) return 'translateX(calc(2 * (-36%)))'
+      return 'translateX(0%)'
+    }};
+  }
 `
 
 export const CarouselSlot = styled.div`

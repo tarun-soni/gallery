@@ -15,20 +15,38 @@ export const UserInfoFooter = styled.div`
     rgb(37 37 37 / 54%),
     #000000e0
   );
+
+  @media screen and (max-width: 768px) {
+  }
 `
 export const UserImg = styled.img`
   border-radius: 50%;
   height: 2rem;
   margin: 0 1rem;
+
+  @media screen and (max-width: 768px) {
+    height: 0.75rem;
+  }
 `
-export const UserNames = styled.div`
+export const UserNameDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   letter-spacing: 1px;
 `
+export const UserName = styled.span`
+  font-size: 1rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.5rem;
+  }
+`
 
 export const DownloadIcon = styled.img`
   width: 2rem;
   margin: 0 1rem 0 3rem;
+  @media screen and (max-width: 768px) {
+    width: 1.5rem;
+    margin: 0 1rem 0 1.5rem;
+  }
 `

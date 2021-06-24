@@ -2,7 +2,8 @@ import React from 'react'
 import {
   UserInfoFooter,
   UserImg,
-  UserNames,
+  UserNameDiv,
+  UserName,
   DownloadIcon
 } from './CardFooter.elements'
 
@@ -11,12 +12,12 @@ const CardFooter = ({ likes, user_img, name }) => {
     <UserInfoFooter>
       <UserImg src={user_img} alt="user-img" />
 
-      <UserNames>
-        <span>
+      <UserNameDiv>
+        <UserName>
           <strong>{name}</strong>
-        </span>
-        <span> {likes} likes recieved</span>
-      </UserNames>
+        </UserName>
+        <UserName> {likes} likes recieved</UserName>
+      </UserNameDiv>
 
       <DownloadIcon src="https://img.icons8.com/pastel-glyph/64/ffffff/download--v1.png" />
     </UserInfoFooter>

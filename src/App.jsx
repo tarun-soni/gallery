@@ -3,6 +3,7 @@ import { createApi } from 'unsplash-js'
 import GlobalStyles from './GlobalStyles'
 import { useEffect, useState } from 'react'
 import Gallery from './components/Gallery/Gallery'
+import styled from 'styled-components/macro'
 function App() {
   const api = createApi({
     accessKey: process.env.REACT_APP_ACCESS_KEY
@@ -57,15 +58,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          marginTop: '3rem'
-        }}
-      >
+      <GlobalWrapper>
         <Gallery
           imagesData={data?.response?.results.slice(0, 5)}
           onShuffleClick={onShuffleClick}
@@ -73,9 +66,16 @@ function App() {
           setQuery={setQuery}
           query={query}
         />
-      </div>
+      </GlobalWrapper>
     </>
   )
 }
 
+const GlobalWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
+`
 export default App
