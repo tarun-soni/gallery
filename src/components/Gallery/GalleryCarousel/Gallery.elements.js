@@ -13,7 +13,7 @@ export const CarouselContainer = styled.div`
   display: flex;
   min-height: 20rem;
   margin-left: -16rem;
-  transition: ${(props) => (props.sliding ? 'none' : 'transform 2s ease')};
+  transition: ${(props) => (props.sliding ? 'none' : 'transform 0.5s ease')};
   transform: ${(props) => {
     if (!props.sliding) return 'translateX(-44.25%)'
     if (props.dir === PREV) return 'translateX(calc(2 * (-44.25%)))'
@@ -23,7 +23,7 @@ export const CarouselContainer = styled.div`
   @media screen and (max-width: 768px) {
     margin-left: -4rem;
     min-height: 10rem;
-    transition: ${(props) => (props.sliding ? 'none' : 'transform 2s ease')};
+    transition: ${(props) => (props.sliding ? 'none' : 'transform 0.5s ease')};
     transform: ${(props) => {
       if (!props.sliding) return 'translateX(-36%)'
       if (props.dir === PREV) return 'translateX(calc(2 * (-36%)))'
