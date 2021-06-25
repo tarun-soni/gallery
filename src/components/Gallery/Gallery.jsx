@@ -45,6 +45,8 @@ const Gallery = ({
                 name={img.user.name}
                 user_img={img.user.profile_image.small}
                 likes={img.likes}
+                download_link={img.links.download_location}
+                // download_link={img.urls.small}
               />
             </Item>
           ))}

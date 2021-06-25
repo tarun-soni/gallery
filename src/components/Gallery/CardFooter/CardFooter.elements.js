@@ -45,6 +45,7 @@ export const UserName = styled.span`
 export const DownloadIcon = styled.img`
   width: 2rem;
   margin: 0 1rem 0 3rem;
+  cursor: pointer;
   @media screen and (max-width: 768px) {
     width: 1.5rem;
     margin: 0 1rem 0 1.5rem;

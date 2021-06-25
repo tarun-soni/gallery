@@ -24,7 +24,6 @@ function App() {
 
   useEffect(() => {
     const fetchPhotos = async () => {
-      console.log('query :>> ', query)
       setLoading(true)
       try {
         const res = await api.search.getPhotos({
@@ -32,7 +31,6 @@ function App() {
           orientation: 'landscape'
         })
 
-        console.log('res :>> ', res)
         setPhotosResponse(res)
 
         setLoading(false)
